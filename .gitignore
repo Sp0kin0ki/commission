@@ -1,0 +1,65 @@
+### Среда разработки ###
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.settings/
+.project
+.classpath
+.metadata/
+bin/
+
+# VS Code
+.vscode/
+
+# Общие файлы ОС
+.DS_Store
+Thumbs.db
+
+### Сборка и зависимости ###
+# Maven
+target/
+pom.xml.versionsBackup
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+### Бинарные файлы ###
+*.class
+*.jar
+*.war
+*.ear
+
+### Конфигурации и секреты ###
+# Файлы с чувствительными данными
+*.properties
+*.keystore
+*.jks
+.env
+config/application-secret.properties
+
+### Тесты и отчеты ###
+# Отчеты Jacoco
+jacoco.exec
+
+# Отчеты Surefire
+surefire-reports/
+
+### Прочее ###
+# Системы контроля версий (на случай, если внутри проекта есть другие репозитории)
+.git/
+.gitmodules
+
+# Дополнительные папки (если используются)
+node_modules/
+dist/
