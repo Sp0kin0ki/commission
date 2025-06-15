@@ -15,7 +15,6 @@
         style="-fx-background-color: linear-gradient(to bottom right, #2c3e50, #4a69bd); -fx-padding: 40;"
         stylesheets="@styles.css">
 
-        <!-- Заголовок с тенью -->
         <Text text="Выберите раздел"
                 style="-fx-fill: white; -fx-font-weight: bold;">
                 <font>
