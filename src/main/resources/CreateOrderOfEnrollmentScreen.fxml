@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<StackPane xmlns="http://javafx.com/javafx/11.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.controllers.CreateOrderOfEnrollmentController"
+           prefWidth="600" prefHeight="400"
+           style="-fx-background-color: #f7f7f7;">
+    <VBox alignment="CENTER" spacing="20">
+        <Label text="Добавить приказ зачисления"
+               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333;"/>
+
+        <GridPane hgap="10" vgap="10" alignment="CENTER">
+            <Label text="ID Абитуриента:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="entrantIdField" promptText="ID абитуриента" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="ID Факультета:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="facultyIdField" promptText="ID факультета" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Зачислен:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <CheckBox fx:id="enrolledCheck" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Дата:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="datePicker" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <Label text="Цена:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <TextField fx:id="priceField" promptText="0.0" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+            <Label text="Статус:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+            <TextField fx:id="statusField" promptText="Статус" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="saveButton" text="Сохранить" onAction="#handleSave"
+                    style="-fx-background-color: #5cb85c; -fx-text-fill: white;"/>
+            <Button fx:id="backButton" text="Назад" onAction="#handleBack"
+                style="-fx-background-color: #adadad; -fx-text-fill: white;"
+                prefWidth="80" />
+        </HBox>
+
+        <Label fx:id="statusLabel" text="" textAlignment="CENTER"
+               style="-fx-font-size: 16px; -fx-text-fill: #555; -fx-font-style: italic;"/>
+    </VBox>
+</StackPane>

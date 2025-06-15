@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.example.controllers.ExamAverageScoreController"
+    style="-fx-background-color: #f0f0f0;">
+
+    <VBox alignment="CENTER" spacing="20"
+        style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 30; -fx-min-width: 600;">
+        <Label text="Средний балл по экзаменам"
+            style="-fx-font-weight: bold; -fx-text-fill: #2c3e50;">
+            <font>
+                <Font size="20" />
+            </font>
+        </Label>
+
+        <TableView fx:id="examTable" style="-fx-min-height: 300; -fx-min-width: 500;">
+            <columns>
+                <TableColumn fx:id="examNameColumn" text="Название экзамена"
+                    style="-fx-font-size: 14; -fx-pref-width: 300;" />
+                <TableColumn fx:id="averageScoreColumn" text="Средний балл"
+                    style="-fx-font-size: 14; -fx-pref-width: 200;" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="backButton" text="Назад" onAction="#handleBack"
+            style="-fx-background-color: #adadad; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-pref-width: 220; -fx-pref-height: 40;"
+            prefWidth="80" />
+    </VBox>
+</StackPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx/11.0.1"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.example.controllers.FindEntrantsBySpecialtyController"
+    prefHeight="600" prefWidth="800"
+    style="-fx-background-color: #f0f0f5;">
+    <VBox alignment="CENTER" spacing="20"
+        style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 30; -fx-min-width: 600;">
+        <!-- Заголовок -->
+        <Label layoutX="20" layoutY="20" text="Поиск абитуриентов по специальности"
+            style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2a4d69;" />
+
+        <!-- Панель поиска -->
+        <HBox alignment="CENTER" layoutX="20" layoutY="70" spacing="10">
+            <Label text="Специальность:" style="-fx-font-size: 14px; -fx-text-fill: black;" />
+            <TextField fx:id="specialtyField" prefWidth="300"
+                promptText="Введите название специальности" />
+            <Button fx:id="searchButton" text="Поиск" onAction="#handleSearch"
+                style="-fx-background-color: #4b86b4; -fx-text-fill: white; -fx-font-weight: bold;"
+                prefWidth="80" />
+            <Button fx:id="backButton" text="Назад" onAction="#handleBack"
+                style="-fx-background-color: #adadad; -fx-text-fill: white;"
+                prefWidth="80" />
+        </HBox>
+
+        <!-- Таблица -->
+        <HBox alignment="CENTER" spacing="20" prefWidth="800">
+            <TableView fx:id="entrantTable" prefWidth="910" prefHeight="450">
+                <columns>
+                    <TableColumn fx:id="name" text="Имя" prefWidth="150" />
+                    <TableColumn fx:id="last_name" text="Фамилия" prefWidth="150" />
+                    <TableColumn fx:id="surname" text="Отчество" prefWidth="150" />
+                    <TableColumn fx:id="application_status" text="Статус заявления" prefWidth="180" />
+                    <TableColumn fx:id="name_of_specialty" text="Специальность" prefWidth="280" />
+                </columns>
+            </TableView>
+        </HBox>
+
+        <!-- Статус бар -->
+        <Label fx:id="statusLabel" layoutX="20" layoutY="580" text="Готово к поиску"
+            style="-fx-text-fill: #555; -fx-font-style: italic;" />
+    </VBox>
+</StackPane>

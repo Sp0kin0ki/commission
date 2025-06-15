@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.controllers.CustomQueryController"
+           style="-fx-background-color: #f0f0f0;">
+    
+    <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 30; -fx-min-width: 800;">
+        <Label text="Произвольный SQL запрос"
+               style="-fx-font-weight: bold; -fx-text-fill: #2c3e50;">
+            <font>
+                <Font size="20"/>
+            </font>
+        </Label>
+        
+        <Label text="Введите SQL запрос (разрешены SELECT, INSERT, UPDATE, DELETE):" 
+               style="-fx-font-size: 14; -fx-text-fill: #555;"/>
+        
+        <TextArea fx:id="sqlInput" promptText="Введите SQL запрос..." 
+                  style="-fx-font-family: 'Monospaced'; -fx-font-size: 14; -fx-min-height: 150; -fx-min-width: 700;"/>
+        
+        <HBox spacing="20" alignment="CENTER">
+            <Button fx:id="executeButton" text="Выполнить" onAction="#handleExecute"
+                    style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-pref-width: 200; -fx-pref-height: 40;"/>
+            
+            <Button fx:id="backButton" text="Назад" onAction="#handleBack"
+                style="-fx-background-color: #adadad; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-pref-width: 200; -fx-pref-height: 40;"/>
+        </HBox>
+        
+        <Label text="Результат выполнения:" 
+               style="-fx-font-size: 14; -fx-text-fill: #555;"/>
+        
+        <TextArea fx:id="resultOutput" editable="false" 
+                  style="-fx-font-family: 'Monospaced'; -fx-font-size: 14; -fx-min-height: 200; -fx-min-width: 700;"/>
+        
+        <Label fx:id="statusLabel" style="-fx-text-fill: #3498db; -fx-font-size: 14; -fx-font-weight: bold;"/>
+    </VBox>
+</StackPane>

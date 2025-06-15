@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.controllers.DeleteFacultyController"
+           style="-fx-background-color: #f0f0f0;">
+    
+    <VBox alignment="CENTER" spacing="25" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 30;">
+        <Label text="Удаление факультета и всех заявлений абитуриентв"
+               style="-fx-font-weight: bold; -fx-text-fill: #2c3e50;">
+            <font>
+                <Font size="20"/>
+            </font>
+        </Label>
+        
+        <VBox spacing="15" alignment="CENTER">
+            <HBox spacing="15" alignment="CENTER">
+                <Label text="ID факультета" style="-fx-font-size: 16; -fx-min-width: 200;">
+                    <font>
+                        <Font size="16"/>
+                    </font>
+                </Label>
+                <TextField fx:id="facultyIdField" promptText="Например: 465718" 
+                           style="-fx-font-size: 16; -fx-pref-height: 35; -fx-pref-width: 300;"/>
+            </HBox>
+        </VBox>
+        
+        <HBox spacing="20" alignment="CENTER">
+            <Button fx:id="deleteButton" text="Удалить факультет" onAction="#handleDelete"
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-pref-width: 220; -fx-pref-height: 40;"/>
+            
+            <Button fx:id="backButton" text="Назад" onAction="#handleBack"
+                style="-fx-background-color: #adadad; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-pref-width: 220; -fx-pref-height: 40;"/>
+        </HBox>
+        
+        <Label fx:id="statusLabel" style="-fx-text-fill: #e74c3c; -fx-font-size: 16; -fx-font-weight: bold;"/>
+    </VBox>
+</StackPane>

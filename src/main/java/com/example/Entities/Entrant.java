@@ -1,10 +1,14 @@
-package com.example.Entities;
+package com.example.entities;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 
@@ -13,6 +17,7 @@ import jakarta.persistence.Table;
 public class Entrant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_entrant")
     private Long idEntrant;
 
     @Column(name = "series_and_number")
@@ -36,6 +41,17 @@ public class Entrant {
     @Column(name = "final_score")
     private Integer finalScore;
 
+    @OneToMany(mappedBy = "idEntrant")
+    private List<EntrantAchievements> achievements = new ArrayList<>();
+
+    @OneToMany(mappedBy = "idEntrant")
+    private List<Application> applications = new ArrayList<>();
+
+    @OneToMany(mappedBy = "idEntrant")
+    private List<ExamResults> examResults = new ArrayList<>();
+
+    @OneToMany(mappedBy = "idEntrant")
+    private List<Documents> documents = new ArrayList<>();
 
     public Long getId_entrant() {return idEntrant;}
     public void setId_entrant(Long id_entrant) {this.idEntrant = id_entrant;}
@@ -53,4 +69,8 @@ public class Entrant {
     public void setYear_of_admission(Integer year_of_admission) {this.yearOfAdmission = year_of_admission;}
     public Integer getFinal_score() {return finalScore;}
     public void setFinal_score(Integer final_score) {this.finalScore = final_score;}
+    public List<EntrantAchievements> getAchievements() {return achievements;}
+    public List<Application> getApplications() {return applications;}
+    public List<ExamResults> getExamResults() {return examResults;}
+    public List<Documents> getDocuments() {return documents;}
 }

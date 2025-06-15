@@ -1,4 +1,4 @@
-package com.example.Entities;
+package com.example.entities;
 
 import java.sql.Date;
 
@@ -17,6 +17,7 @@ public class OrderOfEnrollment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_order") 
     private Long idOrder;
 
     @ManyToOne
@@ -25,7 +26,7 @@ public class OrderOfEnrollment {
 
     @ManyToOne
     @JoinColumn(name = "id_faculty")
-    private Faculty idFaculty;
+    private Faculty faculty;
 
     @Column(name="is_enrolled")
     private Boolean isEnrolled;
@@ -46,8 +47,8 @@ public class OrderOfEnrollment {
     public void setIdOrder(Long idOrder) {this.idOrder = idOrder;}
     public Entrant getIdEntrant() {return idEntrant;}
     public void setIdEntrant(Entrant idEntrant) {this.idEntrant = idEntrant;}
-    public Faculty getIdFaculty() {return idFaculty;}
-    public void setIdFaculty(Faculty idFaculty) {this.idFaculty = idFaculty;}
+    public Faculty getIdFaculty() {return faculty;}
+    public void setIdFaculty(Faculty idFaculty) {this.faculty = idFaculty;}
     public Boolean getIsEnrolled() {return isEnrolled;}
     public void setIsEnrolled(Boolean isEnrolled) {this.isEnrolled = isEnrolled;}
     public Boolean getIsStateEmployee() {return isStateEmployee;}
