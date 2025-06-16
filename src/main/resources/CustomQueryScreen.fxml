@@ -38,8 +38,12 @@
         <Label text="Результат выполнения:" 
                style="-fx-font-size: 14; -fx-text-fill: #555;"/>
         
-        <TextArea fx:id="resultOutput" editable="false" 
-                  style="-fx-font-family: 'Monospaced'; -fx-font-size: 14; -fx-min-height: 200; -fx-min-width: 700;"/>
+        <TextArea 
+            fx:id="resultOutput" 
+            editable="false" 
+            wrapText="true"
+            style="-fx-font-family: 'Monospaced'; -fx-font-size: 14; -fx-min-height: 200; -fx-min-width: 700;"
+        />
         
         <Label fx:id="statusLabel" style="-fx-text-fill: #3498db; -fx-font-size: 14; -fx-font-weight: bold;"/>
     </VBox>

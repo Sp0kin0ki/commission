@@ -111,7 +111,8 @@ public class CustomQueryController {
                     output.append("\n");
                 }
                 
-                resultOutput.setText(output.toString());
+                String formattedOutput = output.toString().replace("\t", "    ");
+                resultOutput.setText(formattedOutput);
                 statusLabel.setText("Найдено строк: " + results.size());
             } else {
                 int count = session.createNativeMutationQuery(sql).executeUpdate();

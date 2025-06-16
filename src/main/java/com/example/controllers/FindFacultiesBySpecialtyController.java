@@ -111,6 +111,7 @@ public class FindFacultiesBySpecialtyController {
                 FROM Faculty f
                 JOIN f.speciality s
                 WHERE s.nameOfSpeciality = :specialityName
+                ORDER BY f.name
             """;
 
             List<Object[]> rows = session.createQuery(hql, Object[].class)

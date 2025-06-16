@@ -35,7 +35,7 @@
                     <TableColumn fx:id="last_name" text="Фамилия" prefWidth="150" />
                     <TableColumn fx:id="surname" text="Отчество" prefWidth="150" />
                     <TableColumn fx:id="application_status" text="Статус заявления" prefWidth="180" />
-                    <TableColumn fx:id="name_of_specialty" text="Специальность" prefWidth="280" />
+                    <TableColumn fx:id="name_of_specialty" text="Факультет" prefWidth="280" />
                 </columns>
             </TableView>
         </HBox>

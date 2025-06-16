@@ -110,7 +110,7 @@ public class FindEntrantsBySpecialtyController {
 
         try (Session session = sessionFactory.openSession()) {
             String hql = "SELECT e.name, e.lastName, e.surname, " +
-                "a.applicationStatus, s.nameOfSpeciality " +
+                "a.applicationStatus, f.name " +
                 "FROM Entrant e " +
                 "JOIN e.applications a " +
                 "JOIN a.faculty f " +

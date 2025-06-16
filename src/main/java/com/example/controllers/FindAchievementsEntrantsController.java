@@ -93,7 +93,7 @@ public class FindAchievementsEntrantsController {
     @FXML
     private void onSearchButtonClicked() {
         try (Session session = sessionFactory.openSession()) {
-            String hql = "SELECT DISTINCT e.name, e.lastName, e.surname, ea.nameAchievements " +
+            String hql = "SELECT e.name, e.lastName, e.surname, ea.nameAchievements " +
                          "FROM Entrant e " +
                          "JOIN e.achievements ea " +
                          "JOIN e.applications a";
