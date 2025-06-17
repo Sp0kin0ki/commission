@@ -2,6 +2,7 @@ module org.project.aeroport.app.aeroport_tp {
     requires transitive javafx.controls;
     requires transitive javafx.fxml;
     requires transitive javafx.web;
+    requires java.naming;
     
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
