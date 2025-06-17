@@ -113,7 +113,8 @@ public class DeleteApplicationController {
             statusLabel.setText("Ошибка удаления");
             Main.showAlert("Ошибка", "Произошла ошибка при удалении: " + e.getMessage());
             e.printStackTrace();
-        }
+        } 
+        passportField.clear();
     }
 
     @FXML

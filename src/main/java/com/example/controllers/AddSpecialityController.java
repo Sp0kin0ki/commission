@@ -84,7 +84,10 @@ public class AddSpecialityController {
 
         try {
             int score = Integer.parseInt(scoreText);
-            
+            if (score <= 0){
+                Main.showAlert("Ошибка", "Баллы должны быть целым положительным числом");
+                return;
+            }
             try (Session session = sessionFactory.openSession()) {
                 session.beginTransaction();
                 

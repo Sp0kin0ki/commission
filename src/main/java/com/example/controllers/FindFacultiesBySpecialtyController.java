@@ -142,8 +142,8 @@ public class FindFacultiesBySpecialtyController {
         statusLabel.setText("Ошибка выполнения запроса");
         Main.showAlert("Ошибка", "Произошла ошибка при выполнении запроса: " + e.getMessage());
         e.printStackTrace();
-    }
-
+        }
+        specialtyField.clear();
     }
 
     @FXML

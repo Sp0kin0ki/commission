@@ -112,6 +112,7 @@ public class DeleteFacultyController {
             showAlert(AlertType.ERROR, "Ошибка", "Не удалось удалить записи: " + e.getMessage());
             e.printStackTrace();
         }
+        facultyIdField.clear();
     }
 
     @FXML

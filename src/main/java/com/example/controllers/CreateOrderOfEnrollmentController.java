@@ -112,6 +112,10 @@ public class CreateOrderOfEnrollmentController {
             if (entrant == null || faculty == null) {
                 statusLabel.setText("Абитуриент или факультет не найдены");
                 session.getTransaction().rollback();
+                entrantIdField.clear();
+                facultyIdField.clear();
+                priceField.clear();
+                statusField.clear();
                 return;
             }
             OrderOfEnrollment order = new OrderOfEnrollment();
@@ -124,6 +128,10 @@ public class CreateOrderOfEnrollmentController {
             session.persist(order);
             session.getTransaction().commit();
             statusLabel.setText("Приказ добавлен");
+            entrantIdField.clear();
+            facultyIdField.clear();
+            priceField.clear();
+            statusField.clear();
         } catch (Exception ex) {
             statusLabel.setText("Ошибка при сохранении");
             ex.printStackTrace();

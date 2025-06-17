@@ -132,10 +132,13 @@ public class CustomQueryController {
         if (TRUNCATE_PATTERN.matcher(sql).find()) return false;
         if (ALTER_PATTERN.matcher(sql).find()) return false;
         if (CREATE_PATTERN.matcher(sql).find()) return false;
-        if (DELETE_WO_WHERE_PATTERN.matcher(sql).find()) return false;
-        if (UPDATE_WO_WHERE_PATTERN.matcher(sql).find()) return false;
         if (MULTI_STATEMENT_PATTERN.matcher(sql).find()) return false;
         
+        if (sql.toUpperCase().contains("DELETE")) {
+            if (!sql.toUpperCase().contains("WHERE")) return false;}
+        if (sql.toUpperCase().contains("UPDATE")) {
+            if (!sql.toUpperCase().contains("WHERE")) return false;}
+    
         return true;
     }
 

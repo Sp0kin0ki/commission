@@ -139,6 +139,7 @@ public class FindEntrantsByFacultyController {
             Main.showAlert("Ошибка", "Произошла ошибка при выполнении запроса: " + e.getMessage());
             e.printStackTrace();
         }
+        facultyField.clear();
     }
 
     @FXML

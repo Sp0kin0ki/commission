@@ -111,6 +111,8 @@ public class UpdateSpecialityScoreController {
             statusLabel.setText("Ошибка обновления");
             Main.showAlert("Ошибка", "Произошла ошибка при обновлении: " + e.getMessage());
         }
+        specialtyNameField.clear();
+        newScoreField.clear();
     }
 
     @FXML

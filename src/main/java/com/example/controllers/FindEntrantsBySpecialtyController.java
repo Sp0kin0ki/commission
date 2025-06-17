@@ -146,6 +146,7 @@ public class FindEntrantsBySpecialtyController {
             Main.showAlert("Ошибка", "Произошла ошибка при выполнении запроса: " + e.getMessage());
             e.printStackTrace();
         }
+        specialtyField.clear();
     }
 
     @FXML
