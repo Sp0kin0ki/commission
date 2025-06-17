@@ -100,7 +100,7 @@ public class ExamAverageScoreController {
             }
         });
     }
-
+    @FXML
     private void loadData() {
         try (Session session = sessionFactory.openSession()) {
             String hql = "SELECT e.examName, ROUND(AVG(er.score), 2) " +

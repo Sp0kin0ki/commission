@@ -14,7 +14,7 @@
            style="-fx-background-color: #f0f0f0;">
     
     <VBox alignment="CENTER" spacing="25" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 30;">
-        <Label text="Удаление факультета и всех заявлений абитуриентв"
+        <Label text="Удаление факультета и всех заявлений абитуриентов"
                style="-fx-font-weight: bold; -fx-text-fill: #2c3e50;">
             <font>
                 <Font size="20"/>
